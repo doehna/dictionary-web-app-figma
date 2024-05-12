@@ -1,6 +1,25 @@
 import * as dropdown from "./dropdown"
+import * as toggle from "./toggle"
 
 document.addEventListener('DOMContentLoaded', function () {
-   // const setTheme = theme => document.documentElement.className = theme;
-   document.getElementsByClassName("select").addEventListener("click", dropdown.displayDropdownOptions());
+    addDropdownEventListener();
+    addToggleEventListener();
 })
+
+function addDropdownEventListener() {
+    document.querySelector(".select").addEventListener("click", function () {
+        dropdown.displayDropdownOptions();
+       });
+}
+
+function addToggleEventListener() {
+    document.querySelector(".toggle").addEventListener("click", function() {        
+        let checkbox = document.querySelector(".toggle-checkbox");
+        checkbox.isChecked = !checkbox.isChecked;
+
+        toggle.changeElementsClass(document.querySelector("html"));
+
+        let toggleTranslateX = checkbox.isChecked ? "20px" : "0px";
+        toggle.changeTogglePosition(document.querySelector(".toggle-button"), toggleTranslateX);
+    });
+}

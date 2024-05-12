@@ -1,4 +1,4 @@
 export function displayDropdownOptions() {
-    const options = document.getElementsByClassName("options");
-    options.style.display = "inline";
+    const options = document.querySelector(".options-box");
+    options.style.display = options.style.display === "inline" ? "none" : "inline";
 }
