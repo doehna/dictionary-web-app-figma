@@ -1,0 +1,89 @@
+:root,
+ :root.light {
+    --bg-color: #FFFFFF;
+    --font-color: #2D2D2D;
+    --sep-color: #E9E9E9;
+    --toggle-color: #757575;
+    --toggle-color-hover: #A445ED;
+ }
+
+ :root.dark {
+    --bg-color: #050505;
+    --font-color: #FFFFFF;
+    --sep-color: #E9E9E9;
+    --toggle-color: #A445ED;
+    --toggle-color-hover: #A445ED;
+ }
+
+ body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+ }
+
+ .container {
+    width: 737px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 37px;
+ }
+
+ .settings {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+ }
+
+.select {
+    background-color: var(--bg-color);
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.options {
+    display: none;
+}
+
+.separator {
+    width: 1px;
+    height: 32px;
+    background-color: var(--sep-color);
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--toggle-color);
+}
+
+.toggle:hover {
+    background-color: var(--toggle-color-hover);
+}
+
+.toggle-button {
+    width: 14px;
+    height: 14px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    margin: 3px;
+}
