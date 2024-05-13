@@ -21,7 +21,7 @@
     --hover: #A445ED;
  }
 
- :root.sans {
+ :root.sans-serif {
     --font-family: sans-serif;
  }
 
@@ -29,7 +29,7 @@
     --font-family: serif;
  }
 
- :root.mono {
+ :root.monospace {
     --font-family: monospace;
  }
 
@@ -96,6 +96,10 @@
     background-color: var(--bg-color);
 }
 
+.options-box:not(:focus) {
+    display: none;
+}
+
 .options {
     display: flex;
     flex-direction: column;
@@ -116,7 +120,7 @@
     color: var(--hover);
 }
 
-.sans {
+.sans-serif {
     font-family: sans-serif;
 }
 
@@ -124,7 +128,7 @@
     font-family: serif;
 }
 
-.mono {
+.monospace {
     font-family: monospace;
 }
 
