@@ -1,1 +1,1 @@
-export const apiUrl = "https://en.wiktionary.org/api/rest_v1/page/definition/";
+export const apiUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
