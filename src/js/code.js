@@ -41,9 +41,10 @@ async function search(e) {
         try {
             let result = await api.getApiData(searchFraze);
             displayResult(result);
+            hideError();
         }
         catch (e) {
-            throw e;
+            displayError();
         }
     }
     else {
@@ -51,17 +52,29 @@ async function search(e) {
     }
 }
 
+function hideError() {
+    let error = document.querySelector(".error-content");
+    error.classList.add("hidden");
+}
+
+function displayError() {
+    let error = document.querySelector(".error-content");
+    error.classList.remove("hidden");
+}
+
 
 function displayResult(result) {
     const jsonList = JSON.parse(result);
     document.querySelector(".content").innerHTML = html.getArticleHtml(jsonList);
+    let footer = document.querySelector("footer");
+    footer.classList.remove("hidden");
 }
 
 function hideOptionsBoxWhenClickedOutside() {
     window.addEventListener('mouseup', function (event) {
         var box = document.querySelector(".options-box");
         if (event.target != box && event.target.parentNode != box) {
-            box.style.display = 'none';
+            box.classList.add("hidden");
         }
     });
 }

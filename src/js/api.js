@@ -16,6 +16,6 @@ export function getApiData(searchFraze) {
             return result;
         })
         .catch(error => {
-            console.error('Error:', error);
+            throw new Error("Big error 2");
         });
 }
