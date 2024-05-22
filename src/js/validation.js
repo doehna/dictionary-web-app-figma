@@ -1,6 +1,6 @@
 export function removeSearchInputValidation() {
     let validation = document.querySelector(".validation");
-    validation.style.display = "none";
+    validation.classList.add("hidden");
 
     let searchField = document.querySelector(".search");
     searchField.classList.remove("error");
@@ -8,7 +8,7 @@ export function removeSearchInputValidation() {
 
 export function addSearchInputValidation() {
     let validation = document.querySelector(".validation");
-    validation.style.display = "block";
+    validation.classList.remove("hidden");
 
     let searchField = document.querySelector(".search");
     searchField.classList.add("error");

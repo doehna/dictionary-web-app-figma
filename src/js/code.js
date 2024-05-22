@@ -35,21 +35,33 @@ function addSubmitEventListener() {
 async function search(e) {
     let searchInput = document.querySelector(".search");
     let searchFraze = searchInput.value;
+    document.querySelector(".content").innerHTML = "";
 
     if (searchFraze) {
+        showLoader();
         validation.removeSearchInputValidation();
         try {
             let result = await api.getApiData(searchFraze);
+            hideLoader();
             displayResult(result);
             hideError();
         }
         catch (e) {
+            hideLoader();
             displayError();
         }
     }
     else {
         validation.addSearchInputValidation();
     }
+}
+
+function showLoader() {
+    document.querySelector(".loader").classList.remove("hidden");
+}
+
+function hideLoader() {
+    document.querySelector(".loader").classList.add("hidden");
 }
 
 function hideError() {

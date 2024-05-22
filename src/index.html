@@ -21,7 +21,7 @@
                     <span class="select-name">Sans Serif</span>
                     <img src="./images/arrow.svg" alt="Dropdown arrow icon." width="12px" height="6px">
                 </button>
-                <div class="options-box">
+                <div class="options-box hidden">
                     <div class="options">
                         <a href="#" class="sans-serif font-link-js">Sans Serif</a>
                         <a href="#" class="serif font-link-js">Serif</a>
@@ -41,28 +41,25 @@
                 <div class="search-container">
                     <input type="text" class="search" placeholder="Search for any word...">
                     <button class="search-icon" width="18px" height="18px"></button>
-                    <div class="validation">Whoops, can’t be empty…</div>
+                    <div class="validation hidden">Whoops, can’t be empty…</div>
                 </div>
             </form>
-            <div class="content">
-                <div>
-                    <div id="loader" class="loader"></div>
-                    <div id="content" class="hidden">
-                        <!-- Your dynamic content goes here -->
-                    </div>
-                </div>
-                <div class="error-content">
-                    <span class="sad-emoji">&#128533;</span>
-                    <span class="error-header">No Definitions Found</span>
-                    <span class="error-info">Sorry pal, we couldn't find definitions for the word you were looking for. You can try the
-                        search again at later time or head to the web instead.</span>
-                </div>
+            <div class="loader hidden"></div>
+            <div class="content"></div>
+            <div class="error-content hidden">
+                <span class="sad-emoji">&#128533;</span>
+                <span class="error-header">No Definitions Found</span>
+                <span class="error-info">Sorry pal, we couldn't find definitions for the word you were looking for. You
+                    can try the
+                    search again at later time or head to the web instead.</span>
             </div>
+
         </main>
-        <footer>
+        <footer class="hidden">
             <span class="source">Source</span>
-            <a href="https://dictionaryapi.dev/" class="link">https://dictionaryapi.dev/ <img src="./images/tabler-external-link.svg" alt="External link icon."></a>
-            
+            <a href="https://dictionaryapi.dev/" class="link">https://dictionaryapi.dev/ <img
+                    src="./images/tabler-external-link.svg" alt="External link icon."></a>
+
         </footer>
     </div>
 </body>
