@@ -739,7 +739,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setTogglePositionByIsCheckedValue", ()=>setTogglePositionByIsCheckedValue);
 function changeTogglePosition(translateX) {
-    toggleButton = document.querySelector(".toggle-button");
+    let toggleButton = document.querySelector(".toggle-button");
     toggleButton.style.transform = `translateX(${translateX})`;
 }
 function setTogglePositionByIsCheckedValue(isChecked) {
