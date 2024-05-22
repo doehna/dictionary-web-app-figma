@@ -1,5 +1,5 @@
 function changeTogglePosition(translateX) {
-    toggleButton = document.querySelector(".toggle-button");
+    let toggleButton = document.querySelector(".toggle-button");
     toggleButton.style.transform = `translateX(${translateX})`;
 }
 
