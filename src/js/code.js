@@ -12,22 +12,39 @@ document.addEventListener('DOMContentLoaded', function () {
     addDropdownEventListener();
     addToggleEventListener();
     addFontOptionListener();
-    addSubmitEventListener();
+    addSubmitEventListeners();
     addSearchEventListener();
 })
 
 function addSearchEventListener() {
     let searchIcon = document.querySelector(".search-icon");
+
     searchIcon.addEventListener("click", async function (e) {
         search(e);
     })
 }
 
-function addSubmitEventListener() {
+function addSubmitEventListeners() {
+    let typingTimer;
+    let doneTypingInterval = 500;
     let searchInput = document.querySelector(".search");
-    searchInput.addEventListener("keypress", async function (e) {
+
+    searchInput.addEventListener("keyup", async function (e) {
+        if (e.key.length === 1) {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(() => {
+                search(e)
+            }, doneTypingInterval);
+        }
+    })
+
+    searchInput.addEventListener("keydown", async function (e) {
         if (e.key === 'Enter') {
             search(e);
+        }
+
+        if (e.key.length === 1) {
+            clearTimeout(typingTimer);
         }
     })
 }
