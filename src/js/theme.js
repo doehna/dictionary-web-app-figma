@@ -27,5 +27,13 @@ export function saveSelectedThemeInLocalStorage(theme) {
 }
 
 export function getThemeFromLocalStorageOrDefault() {
-    return localStorage.getItem("theme") ?? "light";
+    let theme;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = "dark";
+    }
+    else {
+        theme = "light";
+    }
+
+    return localStorage.getItem("theme") ?? theme;
 }
