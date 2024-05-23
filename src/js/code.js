@@ -30,7 +30,7 @@ function addSubmitEventListeners() {
     let searchInput = document.querySelector(".search");
 
     searchInput.addEventListener("keyup", async function (e) {
-        if (e.key.length === 1) {
+    if (e.key.length === 1 || e.key === "Delete" || e.key === "Backspace") {
             clearTimeout(typingTimer);
             typingTimer = setTimeout(() => {
                 search(e)
@@ -43,7 +43,7 @@ function addSubmitEventListeners() {
             search(e);
         }
 
-        if (e.key.length === 1) {
+        if (e.key.length === 1 || e.key === "Delete" || e.key === "Backspace") {
             clearTimeout(typingTimer);
         }
     })
