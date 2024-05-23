@@ -232,6 +232,7 @@ ul {
 }
 
 .search {
+  font-family: var(--font-family);
   color: var(--font-color);
   background-color: var(--search-color);
   box-sizing: border-box;
@@ -253,6 +254,7 @@ ul {
 }
 
 .search::placeholder {
+  font-family: var(--font-family);
   opacity: .25;
 }
 
@@ -446,4 +448,4 @@ ul {
 .hidden {
   display: none;
 }
-/*# sourceMappingURL=index.4cb415c3.css.map */
+/*# sourceMappingURL=index.0227f226.css.map */

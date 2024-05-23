@@ -229,7 +229,7 @@ function $60eafcd7eea799ef$var$addSubmitEventListeners() {
     let doneTypingInterval = 500;
     let searchInput = document.querySelector(".search");
     searchInput.addEventListener("keyup", async function(e) {
-        if (e.key.length === 1) {
+        if (e.key.length === 1 || e.key === "Delete" || e.key === "Backspace") {
             clearTimeout(typingTimer);
             typingTimer = setTimeout(()=>{
                 $60eafcd7eea799ef$var$search(e);
@@ -238,7 +238,7 @@ function $60eafcd7eea799ef$var$addSubmitEventListeners() {
     });
     searchInput.addEventListener("keydown", async function(e) {
         if (e.key === "Enter") $60eafcd7eea799ef$var$search(e);
-        if (e.key.length === 1) clearTimeout(typingTimer);
+        if (e.key.length === 1 || e.key === "Delete" || e.key === "Backspace") clearTimeout(typingTimer);
     });
 }
 async function $60eafcd7eea799ef$var$search(e) {
@@ -312,4 +312,4 @@ function $60eafcd7eea799ef$var$addFontOptionListener() {
 }
 
 
-//# sourceMappingURL=index.d4f8772a.js.map
+//# sourceMappingURL=index.58b9e615.js.map
