@@ -80,7 +80,10 @@ function $c861477e6985d277$export$81813995172ddc32(theme) {
     localStorage.setItem("theme", theme);
 }
 function $c861477e6985d277$export$ef4e8bbbaa7c432a() {
-    return localStorage.getItem("theme") ?? "light";
+    let theme;
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+    else theme = "light";
+    return localStorage.getItem("theme") ?? theme;
 }
 
 
@@ -212,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $60eafcd7eea799ef$var$addDropdownEventListener();
     $60eafcd7eea799ef$var$addToggleEventListener();
     $60eafcd7eea799ef$var$addFontOptionListener();
-    $60eafcd7eea799ef$var$addSubmitEventListener();
+    $60eafcd7eea799ef$var$addSubmitEventListeners();
     $60eafcd7eea799ef$var$addSearchEventListener();
 });
 function $60eafcd7eea799ef$var$addSearchEventListener() {
@@ -221,10 +224,21 @@ function $60eafcd7eea799ef$var$addSearchEventListener() {
         $60eafcd7eea799ef$var$search(e);
     });
 }
-function $60eafcd7eea799ef$var$addSubmitEventListener() {
+function $60eafcd7eea799ef$var$addSubmitEventListeners() {
+    let typingTimer;
+    let doneTypingInterval = 500;
     let searchInput = document.querySelector(".search");
-    searchInput.addEventListener("keypress", async function(e) {
+    searchInput.addEventListener("keyup", async function(e) {
+        if (e.key.length === 1) {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(()=>{
+                $60eafcd7eea799ef$var$search(e);
+            }, doneTypingInterval);
+        }
+    });
+    searchInput.addEventListener("keydown", async function(e) {
         if (e.key === "Enter") $60eafcd7eea799ef$var$search(e);
+        if (e.key.length === 1) clearTimeout(typingTimer);
     });
 }
 async function $60eafcd7eea799ef$var$search(e) {
@@ -298,4 +312,4 @@ function $60eafcd7eea799ef$var$addFontOptionListener() {
 }
 
 
-//# sourceMappingURL=index.cf85d61d.js.map
+//# sourceMappingURL=index.d4f8772a.js.map
