@@ -65,6 +65,7 @@ git clone https://github.com/doehna/dictionary-web-app-figma.git
 - JavaScript
 - JSON
 - API
+- SASS
 
 ## Author
 
