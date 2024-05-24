@@ -1,22 +1,72 @@
-# Using the Figma design file
+# Frontend Mentor - Dictionary web app solution
 
-Using this design file will help you practice building projects in the same way professionals do. Seeing the details in the design will help you improve your accuracy when building projects and build projects faster.
+This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-[Figma](https://www.figma.com/) is an extremely popular design tool that has a generous free tier and can also be used on both Windows and Mac computers.
+## Table of contents
 
-To get started with Figma, [download the correct app for your operating system](https://www.figma.com/downloads/). You can then open the app and open the `.fig` design file by dragging it over the app and dropping it into the projects home screen.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [Getting started](#getting-started)  
+  - [Installation](#installation)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-If you're going to use the Desktop App, you don't need to download the Font Installer from the downloads page. But if you're planning on using the Figma web app you should download and install it to ensure the fonts show up correctly.
+## Overview
 
-If you haven't used Figma before, here are a couple of great resources to get you up to speed: 
+### The challenge
 
-- [“Everything Developers Need To Know About Figma” article on Smashing Magazine](https://www.smashingmagazine.com/2020/09/figma-developers-guide/)
-- ["Introduction to Figma for Developers" video with Ryan Warner and Jason Lengstorf on Learn with Jason](https://www.learnwithjason.dev/introduction-to-figma-for-developers)
+Users should be able to:
 
----
+- Search for words using the input field
+- See the Free Dictionary API's response for the searched word
+- See a form validation message when trying to submit a blank form
+- Play the audio file for a word when it's available
+- Switch between serif, sans serif, and monospace fonts
+- Switch between light and dark themes
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
-**⚠️ IMPORTANT ⚠️: Please be sure not to share our design files with anyone else. We include `.gitignore` files in the starter code download to help prevent you from accidentally uploading it to GitHub. Another easy way to prevent this is to keep the design file separate from your codebase.**
+### Screenshot
 
----
+![](./screenshot.jpg)
 
-Thanks for being a PRO member. We hope you enjoy the challenge! 🙂
+### Links
+
+- Solution URL: [https://github.com/doehna/dictionary-web-app-figma](https://github.com/doehna/dictionary-web-app-figma)
+- Live Site URL: [https://doehna.github.io/dictionary-web-app-figma/](https://doehna.github.io/dictionary-web-app-figma/)
+
+## Getting started
+
+To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+- Clone the repo
+git clone https://github.com/doehna/calculator-app-main.git
+
+- Install NPM packages
+```npm install```
+
+- Start parcel server
+```npm start```
+
+## My process
+
+### Built with
+
+- Figma design
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- JavaScript
+- JSON
+- API
+
+## Author
+
+- Website - [Dorota Wojdecka](https://github.com/doehna)
+- Frontend Mentor - [@doehna](https://www.frontendmentor.io/profile/doehna)
