@@ -46,7 +46,7 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 - Clone the repo
-git clone https://github.com/doehna/calculator-app-main.git
+git clone https://github.com/doehna/dictionary-web-app-figma.git
 
 - Install NPM packages
 ```npm install```
